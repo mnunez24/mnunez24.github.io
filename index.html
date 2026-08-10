@@ -9550,7 +9550,7 @@ a.anchor-link {
 <li>Two-sample T-Test</li>
 </ol>
 <ul>
-<li>Lastly we will compare our historical data and our 7-day sample using a two-sample T-Test assumming each has a different variance.</li>
+<li>Lastly we will compare our historical data and our 7-day sample using a two-sample T-Test assuming each has a different variance.</li>
 </ul>
 </li>
 </ul>
@@ -9559,7 +9559,7 @@ a.anchor-link {
 <h4 id="Notes:">Notes:<a class="anchor-link" href="#Notes:">¶</a></h4><ul>
 <li>Null Hypothesis H₀:  M₀ = Avg = The average attribute during the week June 8th - 14th, 2026 is equal to the historical June average.</li>
 <li>Alternative Hypothesis 𝐻a:  M₀ ≠ Avg =  The average attribute during the week June 8th - 14th, 2026 is different from the historical June average.</li>
-<li>We have used the 2 functons to calculate a 3-year historical distribution by calulating the mean, <strong>($\mu$)</strong> and standard deviation <strong>($\sigma$)</strong> utilizing all days in June 2023 - June 2025 inclusive.</li>
+<li>We have used the 2 functions to calculate a 3-year historical distribution by calculating the mean, <strong>($\mu$)</strong> and standard deviation <strong>($\sigma$)</strong> utilizing all days in June 2023 - June 2025 inclusive.</li>
 <li>The Z-Score indicates how many standard deviations the daily attribute is away from the three-year historical mean.</li>
 <li>We set $\alpha$ level to $\alpha$ = 0.05. This can be changed if needed.</li>
 </ul>
@@ -10555,7 +10555,7 @@ There is a moderately positive correlation between Precipitation vs Humidity
 
     <span class="n">interval</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">alpha</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-    <span class="c1"># Simulating a confidence interval 100% - alpha = ....%.</span>
+    <span class="c1"># Simulating the middle 95& simulation interval 100% - alpha = ....%.</span>
     <span class="c1"># We must split that on both ends so alpha / 2% = ....%</span>
     <span class="c1"># (alpha / 2) |CI| (alpha / 2)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">dates</span><span class="p">,</span>
@@ -10640,7 +10640,7 @@ There is a moderately positive correlation between Precipitation vs Humidity
 The reason why we chose Z and T tests, but primarily focused on the T tests is that the standard deviation was unknown as even though we chose three years worth of Junes, that is still a sample of the total June's in history.
 We still included a Two Tailed Z test as weather is volatile as we wanted to approximate the true population standard deviation with historical data.
 The T-tests were treated as the primary inferential tests becuase the true population standard deviation is unknown. the Z-test was included as an approximate comparison using the historical sample standard deviation as an estimate of population variability.</p>
-<p>Based on the fields we tested, the only fields with strong correlation to each other were Temperature and Feels Like with a correlation=0.981. We had theorized there would have been stronger correlations with Temperature and other fields such as Humidity, but discovered the there was a very weak negative correlation between the two at a correlation=-0.107. However, we found an interesting moderately strong positive correlation between Humidty and Percipitation coming in at correlation=0.517, but expected this value to be higher.</p>
+<p>Based on the fields we tested, the only fields with strong correlation to each other were Temperature and Feels Like with a correlation=0.981. We had theorized there would have been stronger correlations with Temperature and other fields such as Humidity, but discovered the there was a very weak negative correlation between the two at a correlation=-0.107. However, we found an interesting moderately strong positive correlation between Humidity and Precipitation coming in at correlation=0.517, but expected this value to be higher.</p>
 </div>
 </div>
 </div>
@@ -11121,7 +11121,7 @@ Total explained variance: 0.6696933228102515
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">week_pca</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">week_pca</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"X"</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">180</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">"Observed Week"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Principal Component 1"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Principal Component 2"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Histical Weather Clusters and the week in 2026"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Historical Weather Clusters and the week in 2026"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
