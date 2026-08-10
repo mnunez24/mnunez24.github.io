@@ -7935,7 +7935,7 @@ a.anchor-link {
 <span class="n">display</span><span class="p">(</span><span class="n">three_year_dfs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 
 
-<span class="c1"># Now we have the mean and SD so we can calulate the Z-Score by loading in the past 7 days to see if they fit the mean</span>
+<span class="c1"># Now we have the mean and SD so we can calculate the Z-Score by loading in the past 7 days to see if they fit the mean</span>
 <span class="n">seven_day_forecast</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span> <span class="o">+</span> <span class="s2">"2026-06-08"</span> <span class="o">+</span> <span class="n">separator</span> <span class="o">+</span> <span class="s2">"2026-06-14"</span> <span class="o">+</span> <span class="n">final_append</span> <span class="o">+</span> <span class="n">visual_crossing_API_KEY</span> <span class="o">+</span> <span class="n">include</span> <span class="o">+</span> <span class="n">include_elements</span><span class="p">)</span>
 <span class="n">seven_day_forecast</span> <span class="o">=</span> <span class="n">seven_day_forecast</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 <span class="n">seven_day_forecast</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">seven_day_forecast</span><span class="p">[</span><span class="s1">'days'</span><span class="p">])</span>
@@ -9583,7 +9583,7 @@ a.anchor-link {
 <span class="n">hypothesis_test</span><span class="p">(</span><span class="s2">"Precip"</span><span class="p">,</span><span class="o">*</span><span class="n">display_content</span><span class="p">(</span><span class="s2">"Precip"</span><span class="p">,</span> <span class="s2">"Precipitation"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">),</span> <span class="mf">.05</span><span class="p">)</span>
 <span class="n">hypothesis_tests_two_tailed_t</span><span class="p">(</span><span class="s2">"Temp"</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
 <span class="n">hypothesis_tests_left_t</span><span class="p">(</span><span class="s2">"Temp"</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
-<span class="c1"># Passing in dataframes directly into functionn </span>
+<span class="c1"># Passing in dataframes directly into function </span>
 <span class="n">hypothesis_tests_two_sample_t</span><span class="p">(</span><span class="s2">"Temp"</span><span class="p">,</span> <span class="n">three_year_dfs</span><span class="p">,</span> <span class="n">seven_day_forecast</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -10639,7 +10639,7 @@ There is a moderately positive correlation between Precipitation vs Humidity
 <h4 id="Summary:">Summary:<a class="anchor-link" href="#Summary:">¶</a></h4><p>Based on the Z and T tests, we've determined that usually there is no significant evidence that the individual features differ when comparing the week of sample data to historical June.
 The reason why we chose Z and T tests, but primarily focused on the T tests is that the standard deviation was unknown as even though we chose three years worth of Junes, that is still a sample of the total June's in history.
 We still included a Two Tailed Z test as weather is volatile as we wanted to approximate the true population standard deviation with historical data.
-The T-tests were treated as the primary inferential tests becuase the true population standard deviation is unknown. the Z-test was included as an approximate comparison using the historical sample standard deviation as an estimate of population variability.</p>
+The T-tests were treated as the primary inferential tests because the true population standard deviation is unknown. the Z-test was included as an approximate comparison using the historical sample standard deviation as an estimate of population variability.</p>
 <p>Based on the fields we tested, the only fields with strong correlation to each other were Temperature and Feels Like with a correlation=0.981. We had theorized there would have been stronger correlations with Temperature and other fields such as Humidity, but discovered the there was a very weak negative correlation between the two at a correlation=-0.107. However, we found an interesting moderately strong positive correlation between Humidity and Precipitation coming in at correlation=0.517, but expected this value to be higher.</p>
 </div>
 </div>
